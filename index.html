@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siera</title>
+    <link rel="website icon" type="png" href="image/New Project.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="bg-[#0a0226] md:h-[140vh] ">
+        <nav class="fixed top-0 right-0 left-0 z-[999]">
+            <div class="container mx-auto px-[20px] 2xl:w-[1280px]">
+                <div id="navbar" class="h-[10vh] flex justify-between items-center">
+                    <div id="logo">
+                        <a href="#">
+                            <img src="image/sierra-webapp-light.svg" class="w-[120px]" />
+                            <img src="image/sierra-webapp-dark.svg" class="w-[120px] hidden" />
+                        </a>
+                    </div>
+                    <ul id="nav-menu" class="hidden lg:flex">
+                        <li class="nav-li px-[20px]"><a class="text-white  text-[16px] font-medium"
+                                href="#">Solutions</a>
+                            <div></div>
+                        </li>
+                        <li class="nav-li px-[20px]"><a class="text-white text-[16px] font-medium" href="#">Pricing</a>
+                            <div></div>
+                        </li>
+                        <li class="nav-li px-[20px]"><a class="text-white text-[16px] font-medium" href="#">Help</a>
+                            <div></div>
+                        </li>
+                        <li class="nav-li px-[20px]"><a class="text-white text-[16px] font-medium" href="#">Contact</a>
+                            <div></div>
+                        </li>
+                    </ul>
+                    <button id="nav-get"
+                        class=" w-[125px] h-[45px] overflow-hidden relative hidden lg:block bg-[#824deb] text-white py-[12px] px-[25px] font-medium text-[15px] rounded-[8px]">
+                        <span>Get started</span>
+                        <span>Get started</span>
+                    </button>
+                    <div id="nav-btn" class="lg:hidden">
+                        <button onclick="SideOpen()" class="text-[1.6em]">
+                            <i class="fa-solid fa-bars text-white"></i>
+                            <i class="fa-solid fa-xmark text-black hidden"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="hero-section" class="pt-[100px] pb-[30px]">
+            <div class="container mx-auto px-[10px] 2xl:w-[1280px]">
+                <div class="flex flex-col justify-center px-[20px]">
+                    <h6
+                        class="text-white border w-[215px] mx-auto text-center border-[#FFFFFF40] rounded-[5px] text-[15px] font-semibold py-[3px] px-[10px] mb-[14px]">
+                        Built for global customers
+                    </h6>
+                    <h1 class="text-white font-semibold text-[32px] md:text-[44px] lg:text-[60px] text-center">The easy
+                        way to
+                        <span id="hero-span">
+                            <span>
+                                manage
+                            </span>
+                        </span>
+                    </h1>
+                    <ul id="hero-animate"
+                        class="text-white text-center font-semibold text-[32px]  lg:text-[60px] md:text-[44px] mb-[14px]">
+                        <li>product analytics</li>
+                    </ul>
+                    <p class="text-[16px] md:text-[18px] md:px-[100px] text-[#ffffffcc] font-normal text-center">
+                        Accelerate your business with our solutions. Harness cutting-edge technology, and a team to
+                        drive growth.
+                    </p>
+                    <form action="#" class="my-[40px] w-[100%] md:px-[100px] md:w-[70%] md:mx-auto md:flex">
+                        <div class="md:size-8/12 px-[10px]">
+                            <input
+                                class="block w-[100%] rounded-[8px] text-white mb-[10px] bg-[#ffffff12] outline-none border border-[#ffffff26] py-[12px] px-[15px]"
+                                type="text" placeholder="Email" />
+                        </div>
+                        <div class="md:size-4/12 px-[10px]">
+                            <button
+                                class="block w-[100%] text-[15px] font-medium hover:bg-[#824deb] duration-[.3s] hover:text-white rounded-[8px] bg-white text-black py-[12px] px-[15px]">Try
+                                for free</button>
+                        </div>
+                    </form>
+                    <div class="rounded-lg overflow-hidden">
+                        <img class="w-[100%] lg:hidden" src="image/webapp-mockup-2-710x462.png" />
+                        <img class="w-[100%] hidden lg:block" src="image/webapp-mockup-2.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="sidebar"
+        class="fixed right-0 top-[10vh] left-0 bottom-0 duration-[.2s] z-[-50] bg-white opacity-0 lg:hidden">
+        <div class="container mx-auto px-[20px] 2xl:w-[1280px]">
+            <ul class="pt-[30px]">
+                <li class="mb-[12px]"><a href="#"
+                        class="text-[20px] font-medium duration-[.4s] hover:text-[#824deb]">Solutions</a></li>
+                <li class="mb-[12px]"><a href="#"
+                        class="text-[20px] font-medium duration-[.4s] hover:text-[#824deb]">Pricing</a></li>
+                <li class="mb-[12px]"><a href="#"
+                        class="text-[20px] font-medium duration-[.4s] hover:text-[#824deb]">Help</a></li>
+                <li class="mb-[12px]"><a href="#"
+                        class="text-[20px] font-medium duration-[.4s] hover:text-[#824deb]">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <main">
+        <section class="bg-white py-[100px] lg:pt-[200px] xl:pt-[350px]">
+            <div data-aos="fade-up" class="container mx-auto px-[20px] 2xl:w-[1280px]">
+                <div class="mb-[20px] lg:mb-[40px]">
+                    <h6
+                        class="text-[#824deb] border w-[187px] mx-auto text-center border-[#824deb] rounded-[5px] text-[15px] font-semibold py-[3px] px-[10px] mb-[14px]">
+                        eCommerce Analytics
+                    </h6>
+                    <h2 class="text-center font-semibold text-[26px] md:text-[34px] lg:text-[40px]  mb-[10px]">A
+                        powerful <span class="text-[#824deb]">easy-to-use</span> platform</h2>
+                    <p class="text-center text-[14px] lg:text-[16px] lg:w-[50%] lg:mx-auto font-normal">Discover the
+                        core pillars of our platform – quality Scores, expert software support, and tailored management
+                        assistance.</p>
+                </div>
+                <div class="md:flex">
+                    <div class="md:size-4/12 px-[10px]">
+                        <div class="mb-[30px] flex items-start">
+                            <div class="p-[20px] bg-[#f5f5ff] mr-[30px] rounded-[10px]">
+                                <i class="far fa-user-circle text-[35px] text-[#824deb]"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-[16px] lg:text-[18px] font-semibold mb-[10px]">Quality scores</h3>
+                                <p class="text-[14px] lg:text-[16px] font-normal">Keep your strategic goals and planning
+                                    in one place to improve employee engagement.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:size-4/12 px-[10px]">
+                        <div class="mb-[30px] flex items-start">
+                            <div class="p-[20px] bg-[#f5f5ff] mr-[30px] rounded-[10px]">
+                                <i class="fas fa-wallet text-[35px] text-[#824deb]"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-[16px] lg:text-[18px] font-semibold mb-[10px]">Software support</h3>
+                                <p class="text-[14px] lg:text-[16px] font-normal">Define each stage of work to see
+                                    what’s important and where things are getting stuck.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:size-4/12 px-[10px]">
+                        <div class="mb-[30px] flex items-start">
+                            <div class="p-[20px] bg-[#f5f5ff] mr-[30px] rounded-[10px]">
+                                <i class="fas fa-tag text-[35px] text-[#824deb]"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-[16px] lg:text-[18px] font-semibold mb-[10px]">Management help</h3>
+                                <p class="text-[14px] lg:text-[16px] font-normal">From the small stuff to the big
+                                    picture, we organize work so teams know what to do.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section  class="bg-[#F5F5FF] py-[100px]">
+            <div data-aos="fade-up" class="container mx-auto px-[20px] 2xl:w-[1280px]">
+                <div class="flex flex-wrap md:items-center">
+                    <div class="size-[100%] mb-[40px] lg:mb-[100px] md:size-6/12 md:order-2 lg:px-[10px]">
+                        <div>
+                            <h4
+                                class="text-[#824deb] inline-block text-[15px] font-semibold border border-[#824deb] rounded-[5px] py-[2px] mb-[20px] px-[10px]">
+                                Improve Conversions</h4>
+                            <h2 class="text-[26px] md:text-[34px] lg:text-[40px] font-semibold leading-[1.2] mb-[20px]">
+                                <span class="text-[#824deb]">Boost</span> conversions, uncover opportunities</h2>
+                            <p class="text-[14px] md:text-[16px] font-normal leading-[1.75] mb-[20px]">Identify
+                                bottlenecks in your conversion funnels with precision. Our app analyzes every step,
+                                empowering you to optimize the customer journey and maximize sales effortlessly.</p>
+                            <button
+                                class="bg-[#824deb] text-[15px] font-medium main-disc text-white py-[12px] px-[21px] rounded-[10px] w-[155px] h-[45px] overflow-hidden relative">
+                                <span>Discover more</span>
+                                <span class="bg-black">Discover more</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="size-[100%] mb-[40px] lg:mb-[100px] md:size-6/12 md:order-2 lg:px-[10px] xl:pl-[50px]">
+                        <div class="flex flex-wrap md:justify-end lg:justify-start">
+                            <div class="size-8/12 mb-[20px] lg:size-6/12">
+                                <div id="main-image-1" class="rounded-[10px] overflow-hidden duration-[.4s]">
+                                    <img src="image/webapp-2.png" />
+                                </div>
+                            </div>
+                            <div class="size-8/12 mb-[20px] lg:size-6/12 lg:ml-[-80px]">
+                                <div id="main-image-2" class="rounded-[10px] overflow-hidden duration-[.4s]">
+                                    <img src="image/webapp-1.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="size-[100%] mb-[40px] md:size-6/12 md:order-3 lg:px-[10px] xl:pl-[50px]">
+                        <div>
+                            <h4
+                                class="text-[#824deb] inline-block text-[15px] font-semibold border border-[#824deb] rounded-[5px] py-[2px] mb-[20px] px-[10px]">
+                                Best Results</h4>
+                            <h2 class="text-[26px] md:text-[34px] lg:text-[40px] font-semibold leading-[1.2] mb-[20px]">
+                                <span class="text-[#824deb]">Optimize</span> page layouts and refine your content</h2>
+                            <p class="text-[14px] md:text-[16px] font-normal leading-[1.75] mb-[20px]">Enhance your
+                                website's effectiveness. Tailor page layouts and refine content based on real data.
+                                Elevate user engagement, improve retention, and increase your revenue potential.</p>
+                            <button
+                                class="bg-[#824deb] text-[15px] font-medium main-disc text-white py-[12px] px-[21px] rounded-[10px] w-[155px] h-[45px] overflow-hidden relative">
+                                <span>Discover more</span>
+                                <span class="bg-black">Discover more</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="size-[100%] mb-[40px] md:size-6/12 md:order-2 lg:px-[10px]">
+                        <div class="flex flex-wrap">
+                            <div class="size-8/12 mb-[20px] lg:size-6/12">
+                                <div id="main-image-3" class="rounded-[10px] overflow-hidden duration-[.4s]">
+                                    <img src="image/webapp-3.png" />
+                                </div>
+                            </div>
+                            <div class="size-8/12 mb-[20px] lg:size-6/12 lg:ml-[-80px]">
+                                <div id="main-image-4" class="rounded-[10px] overflow-hidden duration-[.4s]">
+                                    <img src="image/webapp-4.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-[100px] bg-[#0A0226]">
+            <div data-aos="fade-up" class="container mx-auto px-[20px] 2xl:w-[1280px]">
+                <div class="text-center mb-[40px]">
+                    <h6 class="text-white border rounded-[5px] border-white inline-block px-[15px] mb-[20px]">How it
+                        works</h6>
+                    <h2 class="text-white text-[26px] md:text-[34px] lg:text-[40px] font-semibold mb-[20px]">Our <span
+                            class="text-[#824deb]">step-by-step</span> approach</h2>
+                    <p class="text-white text-[14px] md:text-[16px] font-normal">With concepts in hand, we meticulously
+                        design, refining every detail to align with your vision and objectives.</p>
+                </div>
+                <div class="bg-[#1B1435] py-[40px] px-[20px] rounded-[20px] overflow-hidden mb-[30px]">
+                    <div class="flex flex-wrap">
+                        <div class="size-[100%] md:size-4/12 mb-[40px] md:pr-[10x] lg:size-3/12">
+                            <a href="#" class="block">
+                                <h3
+                                    class="flex justify-between items-center text-white mb-[10px] text-[18px] lg:text-[21px] font-semibold">
+                                    <span>Pick a plan</span>
+                                    <span class="bg-[#824deb] rounded-[5px] py-[5px] px-[12px] text-[11px]">STEP
+                                        1</span>
+                                </h3>
+                                <p class="text-white text-[14px] md:text-[16px] font-normal">Go through each of your
+                                    options, taking note of which check the boxes of your needs.</p>
+                            </a>
+                        </div>
+                        <div class="hidden lg:flex items-center size-1/12 h-[auto] pl-[20px]">
+                            <div
+                                class="bg-[#ffffff12] flex h-[50px] w-[50px] text-[#ffffff4d] text-[1.5em] items-center justify-center rounded-[50px]">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="size-[100%] md:size-4/12 mb-[40px] md:pl-[10px] lg:size-4/12">
+                            <a href="#" class="block">
+                                <h3
+                                    class="flex justify-between items-center text-white mb-[10px] text-[18px] lg:text-[21px] font-semibold">
+                                    <span>Implement changes</span>
+                                    <span class="bg-[#824deb] rounded-[5px] py-[5px] px-[12px] text-[11px]">STEP
+                                        2</span>
+                                </h3>
+                                <p class="text-white text-[14px] md:text-[16px] font-normal">Identify areas for
+                                    improvement using our detailed insights. Refine your content with ease.</p>
+                            </a>
+                        </div>
+                        <div class="hidden lg:flex items-center size-1/12 h-[auto] pl-[20px]">
+                            <div
+                                class="bg-[#ffffff12] flex h-[50px] w-[50px] text-[#ffffff4d] text-[1.5em] items-center justify-center rounded-[50px]">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="size-[100%] md:size-4/12 md:pl-[10px] lg:size-3/12">
+                            <a href="#" class="block">
+                                <h3
+                                    class="flex justify-between items-center text-white mb-[10px] text-[18px] lg:text-[21px] font-semibold">
+                                    <span>Monitor progress</span>
+                                    <span class="bg-[#824deb] rounded-[5px] py-[5px] px-[12px] text-[11px]">STEP
+                                        3</span>
+                                </h3>
+                                <p class="text-white text-[14px] md:text-[16px] font-normal">Our real-time updates and
+                                    alerts keep you informed. Watch your ecommerce venture thrive.</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#1b1435] rounded-[20px] overflow-hidden relative">
+                    <div class="flex flex-wrap">
+                        <div class="size-[100%] md:size-6/12 py-[40px] px-[30px] mb-[40px]">
+                            <div>
+                                <h6
+                                    class="text-white border rounded-[5px] border-white inline-block px-[15px] mb-[20px]">
+                                    Ready Templates</h6>
+                                <h2
+                                    class="text-white text-[26px] md:text-[34px] lg:text-[40px] font-semibold mb-[10px] leading-[1.2]">
+                                    Essentials to power your website creation</h2>
+                                <p class="text-white text-[14px] md:text-[16px] font-normal mb-[20px]">Getting started
+                                    is a breeze, regardless of your level of experience. Let us automate your tasks.</p>
+                                <button
+                                    class="bg-[#fff] text-[15px] font-medium main-disc text-black py-[12px] px-[21px] rounded-[10px] w-[155px] h-[45px] overflow-hidden relative">
+                                    <span>Get started</span>
+                                    <span class="bg-black text-white">Get started</span>
+                                </button>
+                                <div class="mt-[20px]">
+                                    <span class="inline-block text-white text-[14px] mr-[20px]"><i
+                                            class="far fa-check-circle mr-[5px]"></i> Flexible solution</span>
+                                    <span class="inline-block text-white text-[14px]"><i
+                                            class="far fa-check-circle mr-[5px]"></i> Constant updates</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="size-[100%] md:size-6/12 lg:h-[auto] p-[20px] md:p-0 md:ml-auto lg:flex justify-end">
+                            <div class="overflow-hidden rounded-[10px] lg:h-[auto] mt-auto">
+                                <img src="image/web-app-clients.jpg" />
+                            </div>
+                        </div>
+                        <div id="main-image-5" class="absolute left-[50%] top-[50%] translate-x-[-50%] hidden lg:block duration-[.4s] translate-y-[-30%] w-[300px]">
+                            <img src="image/webapp-mockup-6.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pt-[100px] pb-[50px] bg-white">
+            <div data-aos="fade-up" class="container mx-auto px-[20px] 2xl:w-[1280px]">
+                <div class="mb-[20px] lg:mb-[40px] text-center">
+                    <h6
+                        class="text-[#824deb] border inline-block mx-auto text-center border-[#824deb] rounded-[5px] text-[15px] font-semibold py-[1px] px-[10px] mb-[14px]">
+                        Flexible Pricing
+                    </h6>
+                    <h2 class="text-center font-semibold text-[26px] md:text-[34px] lg:text-[40px]  mb-[10px]">Flexible plans, unmatched value</h2>
+                    <p class="text-center text-[14px] lg:text-[16px] lg:w-[50%] lg:mx-auto font-normal">Whether you're an individual, a small team, or a growing enterprise, we have a plan that aligns perfectly with your goals.</p>
+                </div>
+                <div class="flex justify-center items-center my-[40px]">
+                    <span id="price-text1" class="inline-block mr-[10px] text-[16px] font-semibold lg:text-[18px] text-[#824deb]">Monthly</span>
+                    <button onclick="ShowPrice()" class="bg-[#E0D2FA] relative w-[40px] rounded-[30px] p-[8px]">
+                        <span id="btn-radio" class="w-[20px] bg-[#824deb] rounded-[50px] absolute left-0 top-[-2px] bottom-[-2px] duration-[.2s]"></span>
+                    </button>
+                    <span id="price-text2" class="inline-block ml-[10px] text-[16px] font-semibold lg:text-[18px]">Annualy</span>
+                </div>
+                <div class="flex flex-wrap">
+                    <div class="size-[100%] mb-[40px] sm:size-4/12 md:pr-[20px] lg:pr-[40px]">
+                        <div class="bg-[#F5F5FF] p-[20px] rounded-[20px]">
+                            <h5 class="text-[14px] lg:text-[16px] font-semibold mb-[10px]"><sup class="text-[24px]">$</sup><span class="text-[34px] price-text lg:text-[50px]">29</span> <span class="time-text">/ Month</span></h5>
+                            <h3 class="text-[18px] font-semibold mb-[10px] lg:text-[21px]">Standard</h3>
+                            <p class="text-[14px] lg:text-[16px] font-normal mb-[20px]">For individuals and small teams trying out for an unlimited period.</p>
+                            <ul class="py-[20px] border-t">
+                                <li class="mb-[5px] text-[14px] lg:text-[16px] font-medium"><i class="far fa-check-square text-[#824deb] mr-[5px]"></i> Sell on your own terms</li>
+                                <li class="mb-[5px] text-[14px] lg:text-[16px] font-medium"><i class="far fa-check-square text-[#824deb] mr-[5px]"></i> Robust integrations</li>
+                                <li class="mb-[5px] text-[14px] lg:text-[16px] font-medium"><i class="far fa-check-square text-[#824deb] mr-[5px]"></i> Live streaming</li>
+                                <li class="mb-[5px] text-[14px] lg:text-[16px] font-medium"><i class="far fa-check-square text-[#824deb] mr-[5px]"></i> Marketing tools</li>
+                                <li class="mb-[5px] text-[14px] lg:text-[16px] font-medium"><i class="far fa-check-square text-[#824deb] mr-[5px]"></i> Automations</li>
+                            </ul>
+                            <button class="relative text-center price-btn bg-white text-[15px] font-medium block w-[100%] h-[55px] rounded-[10px] overflow-hidden">
+                                <span class="bg-white text-[#824deb] duration-[.3s]">Get started</span>
+                                <span class="bg-black text-white duration-[.3s]">Get started</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="size-[100%] mb-[40px] md:size-4/12">
+                        <div class="bg-[#824deb] p-[20px] rounded-[20px]">
+                            <h5 class="text-[14px] text-white lg:text-[16px] font-semibold mb-[10px]"><sup class="text-[24px]">$</sup><span class=" price-text text-[34px] lg:text-[50px]">49</span> <span class="time-text">/ Month</span></h5>
+                            <h3 class="text-[18px] text-white font-semibold mb-[10px] lg:text-[21px]">Professional</h3>
+                            <p class="text-[14px] text-white lg:text-[16px] font-normal mb-[20px]">For individual account executives who want increased productivity.</p>
+                            <ul class="py-[20px] border-t text-white">
+                                <li class="mb-[5px] text-[14px] lg:text-[16px] font-medium"><i class="far fa-check-square text-white mr-[5px]"></i> Everything in Standard</li>
+                                <li class="mb-[5px] text-[14px] lg:text-[16px] font-medium"><i class="far fa-check-square text-white mr-[5px]"></i> Unlimited bandwidth</li>
+                                <li class="mb-[5px] text-[14px] lg:text-[16px] font-medium"><i class="far fa-check-square text-white mr-[5px]"></i> Robust integrations</li>
+                                <li class="mb-[5px] text-[14px] lg:text-[16px] font-medium"><i class="far fa-check-square text-white mr-[5px]"></i> Live streaming</li>
+                                <li class="mb-[5px] text-[14px] lg:text-[16px] font-medium"><i class="far fa-check-square text-white mr-[5px]"></i> Marketing tools</li>
+                            </ul>
+                            <button class="relative text-center price-btn bg-white text-[15px] font-medium block w-[100%] h-[55px] rounded-[10px] overflow-hidden">
+                                <span class="bg-white text-[#824deb] duration-[.3s]">Get started</span>
+                                <span class="bg-black text-white duration-[.3s]">Get started</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="size-[100%] md:size-4/12 md:pl-[20px] lg:pl-[40px]">
+                        <div class="bg-[#F5F5FF] p-[20px] rounded-[20px]">
+                            <h5 class="text-[14px] lg:text-[16px] font-semibold mb-[10px]"><sup class="text-[24px]">$</sup><span class="text-[34px] price-text lg:text-[50px]">99</span> <span class="time-text">/ Month</span></h5>
+                            <h3 class="text-[18px] font-semibold mb-[10px] lg:text-[21px]">Enterprise</h3>
+                            <p class="text-[14px] lg:text-[16px] font-normal mb-[20px]">For medium and large sales organizations with advanced needs.</p>
+                            <ul class="py-[20px] border-t">
+                                <li class="mb-[5px] text-[14px] lg:text-[16px] font-medium"><i class="far fa-check-square text-[#824deb] mr-[5px]"></i> Everything in Professional</li>
+                                <li class="mb-[5px] text-[14px] lg:text-[16px] font-medium"><i class="far fa-check-square text-[#824deb] mr-[5px]"></i> Robust integrations</li>
+                                <li class="mb-[5px] text-[14px] lg:text-[16px] font-medium"><i class="far fa-check-square text-[#824deb] mr-[5px]"></i> Live streaming</li>
+                                <li class="mb-[5px] text-[14px] lg:text-[16px] font-medium"><i class="far fa-check-square text-[#824deb] mr-[5px]"></i> Marketing tools</li>
+                                <li class="mb-[5px] text-[14px] lg:text-[16px] font-medium"><i class="far fa-check-square text-[#824deb] mr-[5px]"></i> Automations</li>
+                            </ul>
+                            <button class="relative text-center price-btn bg-white text-[15px] font-medium block w-[100%] h-[55px] rounded-[10px] overflow-hidden">
+                                <span class="bg-white text-[#824deb] duration-[.3s]">Get started</span>
+                                <span class="bg-black text-white duration-[.3s]">Get started</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-[#F5F5FF] pt-[100px] pb-[150px] lg:pb-[300px]">
+            <div data-aos="fade-up" class="container mx-auto px-[20px] 2xl:w-[1280px]">
+                <div class="mb-[50px] lg:mb-[40px] text-center">
+                    <h6
+                        class="text-[#824deb] border inline-block mx-auto text-center border-[#824deb] rounded-[5px] text-[15px] font-semibold py-[1px] px-[10px] mb-[14px]">
+                        Customer Testimonials
+                    </h6>
+                    <h2 class="text-center font-semibold text-[26px] md:text-[34px] lg:text-[40px]  mb-[10px]">We love <span class="text-[#824deb]">our users</span> and they love us</h2>
+                    <p class="text-center text-[14px] lg:text-[16px] lg:w-[50%] lg:mx-auto font-normal">The best way to showcase our commitment is through the experiences and stories of those who have partnered with us.</p>
+                </div>
+                <div class="flex flex-wrap">
+                    <div class="size-[100%] mb-[30px] md:size-4/12 md:px-[10px] md:mb-[0]">
+                        <div class="bg-white p-[40px] overflow-hidden rounded-[20px]">
+                            <p class="mb-[20px] text-[14px] lg:text-[16px] font-normal">I just had to take a moment to express my gratitude for the outstanding service they provided. Their complete assistance and efforts were truly remarkable.</p>
+                            <div class="flex justify-between items-center">
+                                 <div>
+                                    <h3 class="font-semibold text-[16px] lg:text-[18px]">Frederic Hill</h3>
+                                    <h5 class="text-[14px] lg:text-[16px] font-normal">Founder & CEO</h5>
+                                 </div>
+                                 <div class="w-[60px] h-[60px] rounded-[50%] overflow-hidden">
+                                    <img src="image/review2.jpg" />
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="size-[100%] mb-[30px] md:size-4/12 md:px-[10px] md:mb-[0]">
+                        <div class="bg-transparent p-[40px] overflow-hidden rounded-[20px]">
+                            <p class="mb-[20px] text-[14px] lg:text-[16px] font-normal">Every step of the way they provided helpful advice, recommended strategies to ensure our website was optimally set up.</p>
+                            <div class="flex justify-between items-center">
+                                 <div>
+                                    <h3 class="font-semibold text-[16px] lg:text-[18px]">Julie Kyle</h3>
+                                    <h5 class="text-[14px] lg:text-[16px] font-normal">Account Executive</h5>
+                                 </div>
+                                 <div class="w-[60px] h-[60px] rounded-[50%] overflow-hidden">
+                                    <img src="image/review3.jpg" />
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="size-[100%] mb-[30px] md:size-4/12 md:px-[10px] md:mb-[0]">
+                        <div class="bg-white p-[40px] overflow-hidden rounded-[20px]">
+                            <p class="mb-[20px] text-[14px] lg:text-[16px] font-normal">Excellent service and throughly trained professionals, and their follow-up on tickets was handled with such care and attention to detail.</p>
+                            <div class="flex justify-between items-center">
+                                 <div>
+                                    <h3 class="font-semibold text-[16px] lg:text-[18px]">Brendan Buck</h3>
+                                    <h5 class="text-[14px] lg:text-[16px] font-normal">Data Engineer</h5>
+                                 </div>
+                                 <div class="w-[60px] h-[60px] rounded-[50%] overflow-hidden">
+                                    <img src="image/review4.jpg" />
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="size-[100%] mb-[30px] md:size-4/12 md:px-[10px] md:mb-[0]">
+                        <div class="bg-transparent p-[40px] overflow-hidden rounded-[20px]">
+                            <p class="mb-[20px] text-[14px] lg:text-[16px] font-normal">Every step of the way they provided helpful advice, recommended strategies to ensure our website was optimally set up, and made sure every element was clear.​</p>
+                            <div class="flex justify-between items-center">
+                                 <div>
+                                    <h3 class="font-semibold text-[16px] lg:text-[18px]">James Ellis</h3>
+                                    <h5 class="text-[14px] lg:text-[16px] font-normal">Content Designer</h5>
+                                 </div>
+                                 <div class="w-[60px] h-[60px] rounded-[50%] overflow-hidden">
+                                    <img src="image/review4.jpg" />
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="size-[100%] mb-[30px] md:size-4/12 md:px-[10px] md:mb-[0]">
+                        <div class="bg-white p-[40px] overflow-hidden rounded-[20px]">
+                            <p class="mb-[20px] text-[14px] lg:text-[16px] font-normal">Excellent service and throughly trained professionals, and their follow-up on tickets was handled with such care and attention to detail.</p>
+                            <div class="flex justify-between items-center">
+                                 <div>
+                                    <h3 class="font-semibold text-[16px] lg:text-[18px]">Paige Lowery</h3>
+                                    <h5 class="text-[14px] lg:text-[16px] font-normal">Marketing Manager</h5>
+                                 </div>
+                                 <div class="w-[60px] h-[60px] rounded-[50%] overflow-hidden">
+                                    <img src="image/review1.jpg" />
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="size-[100%] mb-[30px] md:size-4/12 md:px-[10px] md:mb-[0]">
+                        <div class="bg-transparent p-[40px] overflow-hidden rounded-[20px]">
+                            <p class="mb-[20px] text-[14px] lg:text-[16px] font-normal">I just had to take a moment to express my gratitude for the outstanding service they provided. Their complete assistance and efforts were truly remarkable.</p>
+                            <div class="flex justify-between items-center">
+                                 <div>
+                                    <h3 class="font-semibold text-[16px] lg:text-[18px]">Stefan Ball</h3>
+                                    <h5 class="text-[14px] lg:text-[16px] font-normal">Head of Brand</h5>
+                                 </div>
+                                 <div class="w-[60px] h-[60px] rounded-[50%] overflow-hidden">
+                                    <img src="image/review2.jpg" />
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-[#0A0226] pb-[100px]">
+            <div class="container mx-auto px-[20px] 2xl:w-[1280px] relative pt-[300px]">
+                <div class="bg-[#824deb] absolute top-[-130px] lg:top-[-200px] left-[20px] lg:h-[490px] overflow-hidden right-[20px] rounded-[10px]">
+                    <div class="flex flex-wrap overflow-hidden h-[100%]">
+                        <div class="size-[100%] px-[20px] py-[40px] lg:size-6/12 lg:px-[40px] lg:py-[100px]">
+                            <h6
+                                class="text-white border inline-block mx-auto text-center border-white rounded-[5px] text-[15px] font-semibold py-[1px] px-[10px] mb-[14px]">
+                                Customer Testimonials
+                            </h6>
+                            <h2 class="text-white font-semibold text-[26px] md:text-[34px] lg:text-[40px] leading-[1.2] mb-[10px]">A single, powerful, easy-to-use platform</h2>
+                            <p class="text-white text-[14px] lg:text-[16px] font-normal mb-[30px]">Dive into the world of data-driven growth. Get started today and watch your online business thrive.</p>
+                            <button class="relative text-center price-btn bg-white text-[15px] font-medium block w-[135px] h-[50px] rounded-[10px] overflow-hidden">
+                                <span class="bg-white text-[black] duration-[.3s]">Get started</span>
+                                <span class="bg-black text-white duration-[.3s]">Get started</span>
+                            </button>
+                        </div>
+                        <div class="hidden relative lg:block lg:size-6/12 lg:pl-[20px]">
+                            <div>
+                                <div class="rotate-[15deg] rounded-[20px] overflow-hidden absolute top-[-170px] xl:right-[20px] right-[-40px]">
+                                    <img width="500px" class="rounded-[20px]" src="image/web-app-clients.jpg" />
+                                </div>
+                                <div class="rotate-[15deg] rounded-[20px] overflow-hidden absolute xl:top-[230px] xl:left-[-10px] top-[210px] left-[-70px]">
+                                    <img width="250px" class="rounded-[20px]" src="image/webapp-4.png" />
+                                </div>
+                                <div class="rotate-[15deg] rounded-[20px] overflow-hidden absolute xl:top-[300px] xl:right-[120px] top-[280px] right-[50px]">
+                                    <img width="250px" class="rounded-[20px]" src="image/webapp-1.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:mt-[50px]">
+                    <div class="flex flex-wrap">
+                        <div class="size-[100%] mb-[20px] lg:size-6/12 lg:px-[20px]">
+                            <div>
+                                <h6 class="text-[#fff] border inline-block mx-auto border-[#fff] rounded-[5px] text-[15px] font-semibold py-[1px] px-[10px] mb-[14px]">
+                                    Innovative Brands
+                                </h6>
+                                <h2 class="font-semibold text-[26px] text-white  md:text-[34px] lg:text-[40px] mb-[10px]">We are <span class="text-[#824deb]">trusted by</span> brands across all industries</h2>
+                                <p class="text-white text-[14px] lg:text-[16px] font-normal">Join the ranks of successful ecommerce brands. See the difference trusted by industry leaders.</p>
+                            </div>
+                        </div>
+                        <div class="size-[100%] mb-[20px] lg:size-6/12 lg:px-[20px]">
+                            <div class="flex flex-wrap">
+                                <div class="px-[10px] size-[100%] md:w-[33.33%] ">
+                                    <button class="flex end-btns h-[120px] my-[10px] w-[100%] rounded-[10px] justify-center items-center bg-[#1B1435] ">
+                                        <img src="image/logo-5-white.svg" />
+                                    </button>
+                                </div>
+                                <div class="px-[10px] size-[100%] md:w-[33.33%] ">
+                                    <button class="flex end-btns h-[120px] my-[10px] w-[100%] rounded-[10px] justify-center items-center bg-[#1B1435] ">
+                                        <img src="image/logo-4-white.svg" />
+                                    </button>
+                                </div>
+                                <div class="px-[10px] size-[100%] md:w-[33.33%] ">
+                                    <button class="flex end-btns h-[120px] my-[10px] w-[100%] rounded-[10px] justify-center items-center bg-[#1B1435] ">
+                                        <img src="image/logo-1-white.svg" />
+                                    </button>
+                                </div>
+                                <div class="px-[10px] size-[100%] md:w-[33.33%] ">
+                                    <button class="flex end-btns h-[120px] my-[10px] w-[100%] rounded-[10px] justify-center items-center bg-[#1B1435] ">
+                                        <img src="image/logo-2-white.svg" />
+                                    </button>
+                                </div>
+                                <div class="px-[10px] size-[100%] md:w-[33.33%] ">
+                                    <button class="flex end-btns h-[120px] my-[10px] w-[100%] rounded-[10px] justify-center items-center bg-[#1B1435] ">
+                                        <img src="image/logo-3-white.svg" />
+                                    </button>
+                                </div>
+                                <div class="px-[10px] size-[100%] md:w-[33.33%] ">
+                                    <button class="flex end-btns h-[120px] my-[10px] w-[100%] rounded-[10px] justify-center items-center bg-[#1B1435] ">
+                                        <img src="image/logo-5-white.svg" />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="pt-[100px] lg:sticky z-[-1] bottom-0">
+        <div class="container mx-auto px-[20px] 2xl:w-[1280px]">
+            <div class="flex flex-wrap pb-[50px]">
+                <div class="size-[100%] md:size-3/12 mb-[20px] lg:pr-[30px] md:pr-[10px]">
+                    <div>
+                        <div class="w-[120px] mb-[20px]">
+                            <img src="image/sierra-webapp-dark.svg" />
+                        </div>
+                        <p class="text-[14px] lg:text-[16px] font-normal">Our beautiful designs open the door to a realm of limitless possibilities, where imagination knows no bounds.</p>
+                    </div>
+                </div>
+                <div class="size-[100%] md:size-2/12 mb-[20px]">
+                    <h4 class="text-[16px] font-semibold mb-[10px] lg:text-[18px]">Features</h4>
+                    <ul>
+                        <li class="mb-[10px]">
+                            <a href="#" class="text-[14px] hover:text-[#824deb] footer-link inline-block font-normal">Page builder
+                                <div class="h-[2px] w-[0] bg-[#824deb] duration-[.3s]"></div>
+                            </a>
+                        </li>
+                        <li class="mb-[10px]">
+                            <a href="#" class="text-[14px] hover:text-[#824deb] footer-link inline-block font-normal">Theme options
+                                <div class="h-[2px] w-[0] bg-[#824deb] duration-[.3s]"></div>
+                            </a>
+                        </li>
+                        <li class="mb-[10px]">
+                            <a href="#" class="text-[14px] hover:text-[#824deb] footer-link inline-block font-normal">Theme builder
+                                <div class="h-[2px] w-[0] bg-[#824deb] duration-[.3s]"></div>
+                            </a>
+                        </li>
+                        <li class="mb-[10px]">
+                            <a href="#" class="text-[14px] hover:text-[#824deb] footer-link inline-block font-normal">Template library
+                                <div class="h-[2px] w-[0] bg-[#824deb] duration-[.3s]"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="size-[100%] md:size-2/12 mb-[20px]">
+                    <h4 class="text-[16px] font-semibold mb-[10px] lg:text-[18px]">Resources</h4>
+                    <ul>
+                        <li class="mb-[10px]">
+                            <a href="#" class="text-[14px] hover:text-[#824deb] footer-link inline-block font-normal">Support center
+                                <div class="h-[2px] w-[0] bg-[#824deb] duration-[.3s]"></div>
+                            </a>
+                        </li>
+                        <li class="mb-[10px]">
+                            <a href="#" class="text-[14px] hover:text-[#824deb] footer-link inline-block font-normal">Documentation
+                                <div class="h-[2px] w-[0] bg-[#824deb] duration-[.3s]"></div>
+                            </a>
+                        </li>
+                        <li class="mb-[10px]">
+                            <a href="#" class="text-[14px] hover:text-[#824deb] footer-link inline-block font-normal">Community
+                                <div class="h-[2px] w-[0] bg-[#824deb] duration-[.3s]"></div>
+                            </a>
+                        </li>
+                        <li class="mb-[10px]">
+                            <a href="#" class="text-[14px] hover:text-[#824deb] footer-link inline-block font-normal">Hosting
+                                <div class="h-[2px] w-[0] bg-[#824deb] duration-[.3s]"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="size-[100%] md:size-2/12 mb-[20px]">
+                    <h4 class="text-[16px] font-semibold mb-[10px] lg:text-[18px]">Follow us</h4>
+                    <ul>
+                        <li class="mb-[10px]">
+                            <a href="#" class="text-[14px] hover:text-[#824deb] footer-link inline-block font-normal">Behance
+                                <div class="h-[2px] w-[0] bg-[#824deb] duration-[.3s]"></div>
+                            </a>
+                        </li>
+                        <li class="mb-[10px]">
+                            <a href="#" class="text-[14px] hover:text-[#824deb] footer-link inline-block font-normal">Dribbble
+                                <div class="h-[2px] w-[0] bg-[#824deb] duration-[.3s]"></div>
+                            </a>
+                        </li>
+                        <li class="mb-[10px]">
+                            <a href="#" class="text-[14px] hover:text-[#824deb] footer-link inline-block font-normal">Facebook
+                                <div class="h-[2px] w-[0] bg-[#824deb] duration-[.3s]"></div>
+                            </a>
+                        </li>
+                        <li class="mb-[10px]">
+                            <a href="#" class="text-[14px] hover:text-[#824deb] footer-link inline-block font-normal">Instagram
+                                <div class="h-[2px] w-[0] bg-[#824deb] duration-[.3s]"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="size-[100%] md:size-3/12 mb-[20px]">
+                    <h4 class="text-[16px] font-semibold mb-[10px] lg:text-[18px]">Follow us</h4>
+                    <p class="text-[14px] lg:text-[16px] font-normal mb-[20px]">hello@company.com</p>
+                    <ul class="flex">
+                        <li>
+                            <button class="w-[50px] h-[50px] flex items-center hover:bg-[#824deb] duration-[.3s] hover:translate-y-[-10px] hover:text-white rounded-[5px] justify-center text-[.8em] bg-[#f5f5f5] mr-[10px] text-[#824deb]">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="w-[50px] h-[50px] flex items-center hover:bg-[#824deb] duration-[.3s] hover:translate-y-[-10px] hover:text-white rounded-[5px] justify-center text-[.8em] bg-[#f5f5f5] mr-[10px] text-[#824deb]">
+                                <i class="fa-brands fa-twitter"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="w-[50px] h-[50px] flex items-center hover:bg-[#824deb] duration-[.3s] hover:translate-y-[-10px] hover:text-white rounded-[5px] justify-center text-[.8em] bg-[#f5f5f5] mr-[10px] text-[#824deb]">
+                                <i class="fa-brands fa-instagram"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-wrap justify-between border-t py-[20px]">
+                <div class="w-[100%] md:w-[auto] mb-[20px] text-[14px] lg:text-[16px] font-normal">© KeyDesign WordPress Theme. All Rights Reserved.</div>
+                <ul class="w-[100%] md:w-[auto] flex text-[14px] lg:text-[16px] font-normal">
+                    <li class="mr-[40px]">Terms & Conditions</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
